@@ -1,3 +1,3 @@
-public record Moneda(String conversion_rates) {
+public record Moneda(Object conversion_rates) {
 
 }
