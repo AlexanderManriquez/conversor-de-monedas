@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 
 public class BuscadorMoneda {
 
-    public Moneda ingresoUsuario (int moneda){
+    public Moneda ingresoUsuario (String moneda){
     URI direccion = URI.create("https://v6.exchangerate-api.com/v6/b968a5e4dca58bf40a81d984/latest/" + moneda);
 
     HttpClient client = HttpClient.newHttpClient();
