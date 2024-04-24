@@ -5,7 +5,7 @@ import java.net.http.HttpResponse;
 
 import com.google.gson.Gson;
 
-public class BuscadorMoneda {
+public class ConversorMoneda {
 
     // Método para obtener la tasa de conversión entre dos monedas
     public double obtenerTasaConversion(String monedaOrigen, String monedaDestino) {

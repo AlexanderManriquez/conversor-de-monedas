@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Principal {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
-        BuscadorMoneda buscadorMoneda = new BuscadorMoneda();
+        ConversorMoneda buscadorMoneda = new ConversorMoneda();
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Bienvenido al conversor de monedas");
