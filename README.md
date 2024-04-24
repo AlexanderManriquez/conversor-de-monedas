@@ -20,7 +20,8 @@ Para cumplir con este desafío utilizaré 🧰:
 
 ### Pendientes
 
-💡Agregar un listado de códigos de moneda que se pueden utilizar en el conversoer.
+💡Agregar un listado de códigos de moneda que se pueden utilizar en el conversor.
+
 💡Crear una parte visual que permita al usuario interactuar con la aplicación y seleccionar las monedas de un listado.
 
 ### En Construcción... 🏴‍☠️
