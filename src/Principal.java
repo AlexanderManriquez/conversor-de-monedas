@@ -1,6 +1,8 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class Principal {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         BuscadorMoneda buscadorMoneda = new BuscadorMoneda();
         Scanner entrada = new Scanner(System.in);
@@ -8,6 +10,23 @@ public class Principal {
         System.out.println("Bienvenido al conversor de monedas");
         System.out.println("Por favor, ingrese la moneda de origen:");
         String monedaOrigen = entrada.nextLine();
+
+        // Obtener el objeto Moneda
+        Moneda monedaData = buscadorMoneda.ingresoUsuario(monedaOrigen);
+        
+        // Verificar si el objeto Moneda tiene tasas de conversión
+        if (monedaData.getConversionRates() == null) {
+            System.out.println("No se encontraron tasas de conversión para la moneda especificada.");
+            return; // Salir del programa
+        }
+        
+        // Imprimir las tasas de conversión
+        System.out.println("Tasas de conversión:");
+        for (Map.Entry<String, Double> entry : monedaData.getConversionRates().entrySet()) {
+            String moneda = entry.getKey();
+            double tasa = entry.getValue();
+            System.out.println(moneda + ": " + tasa);
+        }
         
         System.out.println("Ingrese la moneda de destino:");
         String monedaDestino = entrada.nextLine();
