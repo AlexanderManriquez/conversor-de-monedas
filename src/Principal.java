@@ -6,8 +6,10 @@ public class Principal {
         ConversorMoneda buscadorMoneda = new ConversorMoneda();
         Scanner entrada = new Scanner(System.in);
         
+        System.out.println("*************************************");
         System.out.println("Bienvenido al conversor de monedas");
-        System.out.println("Por favor, ingrese la moneda de origen:");
+        System.out.println("*************************************");
+        System.out.println("\nPor favor, ingrese la moneda de origen:");
         String monedaOrigen = entrada.nextLine();
 
         // Obtener el objeto Moneda
@@ -19,15 +21,15 @@ public class Principal {
             return; // Salir del programa
         }
         
-        System.out.println("Ingrese la moneda de destino:");
+        System.out.println("\nIngrese la moneda de destino:");
         String monedaDestino = entrada.nextLine();
         
-        System.out.println("Ingrese la cantidad de dinero a convertir:");
+        System.out.println("\nIngrese la cantidad de dinero a convertir:");
         double cantidad = entrada.nextDouble();
         
         double cantidadConvertida = buscadorMoneda.convertirMoneda(cantidad, monedaOrigen, monedaDestino);
         
-        System.out.println(cantidad + " " + monedaOrigen + " equivale a " + cantidadConvertida + " " + monedaDestino);
+        System.out.println("\n" + cantidad + " " + monedaOrigen + " equivale a " + cantidadConvertida + " " + monedaDestino);
         
         entrada.close();
     }
