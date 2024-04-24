@@ -10,7 +10,14 @@ public class BuscadorMoneda {
     // Método para obtener la tasa de conversión entre dos monedas
     public double obtenerTasaConversion(String monedaOrigen, String monedaDestino) {
         Moneda datosMoneda = ingresoUsuario(monedaOrigen);
-        return datosMoneda.getConversionRates().get(monedaDestino);
+        Double tasa = datosMoneda.getConversionRates().get(monedaDestino);
+        
+        // Verificar si la tasa de conversión es null
+        if (tasa == null) {
+            throw new RuntimeException("La tasa de conversión entre " + monedaOrigen + " y " + monedaDestino + " no está disponible.");
+        }
+        
+        return tasa.doubleValue();
     }
 
     // Método para realizar la conversión de una cantidad de una moneda a otra
@@ -33,8 +40,8 @@ public class BuscadorMoneda {
             String responseBody = response.body();
 
             // Imprimir la respuesta responseBody
-         System.out.println("Respuesta de la API:");
-         System.out.println(responseBody);
+         //System.out.println("Respuesta de la API:");
+         //System.out.println(responseBody);
          
             Gson gson = new Gson();
             Moneda monedaData = gson.fromJson(responseBody, Moneda.class);
