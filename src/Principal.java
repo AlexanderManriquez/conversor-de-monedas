@@ -9,7 +9,7 @@ public class Principal {
         System.out.println("*************************************");
         System.out.println("Bienvenido al conversor de monedas");
         System.out.println("*************************************");
-        System.out.println("\nPor favor, ingrese la moneda de origen:");
+        System.out.println("\nPor favor, ingrese el código de la moneda de origen (en mayúsculas):");
         String monedaOrigen = entrada.nextLine();
 
         // Obtener el objeto Moneda
@@ -21,7 +21,7 @@ public class Principal {
             return; // Salir del programa
         }
         
-        System.out.println("\nIngrese la moneda de destino:");
+        System.out.println("\nPor favor, ingrese el código de la moneda de destino (en mayúsculas):");
         String monedaDestino = entrada.nextLine();
         
         System.out.println("\nIngrese la cantidad de dinero a convertir:");

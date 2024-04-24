@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.Set;
 
 public class Moneda {
 
@@ -12,4 +13,8 @@ public class Moneda {
         this.conversion_rates = conversion_rates;
     }
 
+    // Método para obtener solo los códigos de moneda
+    public Set<String> getCodigosMoneda() {
+        return conversion_rates.keySet();
+    }
 }
