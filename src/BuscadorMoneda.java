@@ -7,19 +7,32 @@ import com.google.gson.Gson;
 
 public class BuscadorMoneda {
 
-    public Moneda ingresoUsuario (String moneda){
-    URI direccion = URI.create("https://v6.exchangerate-api.com/v6/b968a5e4dca58bf40a81d984/latest/" + moneda);
-
-    HttpClient client = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder()
-                            .uri(direccion)
-                            .build();
-    HttpResponse<String> response;
-    try {
-        response = client.send(request, HttpResponse.BodyHandlers.ofString());
-    } catch (Exception e) {
-        throw new RuntimeException("Moneda no encontrada");
+    // Método para obtener la tasa de conversión entre dos monedas
+    public double obtenerTasaConversion(String monedaOrigen, String monedaDestino) {
+        Moneda datosMoneda = ingresoUsuario(monedaOrigen);
+        return datosMoneda.getConversionRates().get(monedaDestino);
     }
-    return new Gson().fromJson(response.body(), Moneda.class);
+
+    // Método para realizar la conversión de una cantidad de una moneda a otra
+    public double convertirMoneda(double cantidad, String monedaOrigen, String monedaDestino) {
+        double tasaConversion = obtenerTasaConversion(monedaOrigen, monedaDestino);
+        return cantidad * tasaConversion;
+    }
+
+    // Método para obtener los datos de la moneda desde la API
+    public Moneda ingresoUsuario(String moneda) {
+        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/b968a5e4dca58bf40a81d984/latest/" + moneda);
+
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(direccion)
+                .build();
+        HttpResponse<String> response;
+        try {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (Exception e) {
+            throw new RuntimeException("Moneda no encontrada");
+        }
+        return new Gson().fromJson(response.body(), Moneda.class);
     }
 }
