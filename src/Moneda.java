@@ -3,7 +3,7 @@ import java.util.Map;
 public class Moneda {
 
     private Map<String, Double> conversionRates;
-
+    
     public Map<String, Double> getConversionRates() {
         return conversionRates;
     }

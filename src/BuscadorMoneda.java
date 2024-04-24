@@ -31,6 +31,11 @@ public class BuscadorMoneda {
         try {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
             String responseBody = response.body();
+
+            // Imprimir la respuesta responseBody
+         System.out.println("Respuesta de la API:");
+         System.out.println(responseBody);
+         
             Gson gson = new Gson();
             Moneda monedaData = gson.fromJson(responseBody, Moneda.class);
             
