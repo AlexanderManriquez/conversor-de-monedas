@@ -1,8 +1,15 @@
-public record Moneda(Object conversion_rates) {
+import java.util.Map;
 
-    public Object getConversionRates() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getConversionRates'");
+public class Moneda {
+
+    private Map<String, Double> conversionRates;
+
+    public Map<String, Double> getConversionRates() {
+        return conversionRates;
+    }
+
+    public void setConversionRates(Map<String, Double> conversionRates) {
+        this.conversionRates = conversionRates;
     }
 
 }
