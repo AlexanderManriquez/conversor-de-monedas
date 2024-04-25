@@ -23,9 +23,10 @@ public class MonedasAdmitidas {
         monedasAdmitidas.add("JPY: Yen Japonés");
     }
 
-    public static Set<String> getMonedasAdmitidas() {
-        return monedasAdmitidas;
+    public static boolean esMonedaAdmitida(String moneda) {
+        return monedasAdmitidas.contains(moneda);
     }
+    
 
     public static void mostrarMonedasAdmitidas() {
         System.out.println("Monedas admitidas para conversión:");
