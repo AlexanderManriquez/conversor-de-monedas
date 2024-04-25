@@ -22,6 +22,8 @@ Para cumplir con este desafío utilizaré 🧰:
 
 💡Agregar un listado de códigos de moneda que se pueden utilizar en el conversor.
 
+💡Agregar un historial de conversiones.
+
 💡Crear una parte visual que permita al usuario interactuar con la aplicación y seleccionar las monedas de un listado.
 
 ### En Construcción... 🏴‍☠️
