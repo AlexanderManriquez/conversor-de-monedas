@@ -22,6 +22,12 @@ public class Principal {
             System.out.println("\nPor favor, ingrese el código de la moneda de origen (en mayúsculas):");
             String monedaOrigen = entrada.nextLine();
 
+            // Validar si la moneda de origen es admitida
+            if (!MonedasAdmitidas.esMonedaAdmitida(monedaOrigen)) {
+                System.out.println("La moneda especificada no es admitida.");
+                continue; // Volver a solicitar la entrada de la moneda de origen
+            }
+
             // Obtener el objeto Moneda
             Moneda monedaData = conversorMoneda.ingresoUsuario(monedaOrigen);
         
@@ -33,9 +39,16 @@ public class Principal {
         
             System.out.println("\nPor favor, ingrese el código de la moneda de destino (en mayúsculas):");
             String monedaDestino = entrada.nextLine();
+
+            if (!MonedasAdmitidas.esMonedaAdmitida(monedaDestino)) {
+                System.out.println("La moneda especificada no es admitida.");
+                continue; 
+            }
+
+            entrada.nextLine();
         
             System.out.println("\nIngrese la cantidad de dinero a convertir:");
-            double cantidad = entrada.nextDouble();
+            double cantidad = entrada.nextDouble();         
         
             double cantidadConvertida = conversorMoneda.convertirMoneda(cantidad, monedaOrigen, monedaDestino);
         
