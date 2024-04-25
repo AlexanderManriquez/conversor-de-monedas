@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Principal {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
-        ConversorMoneda buscadorMoneda = new ConversorMoneda();
+        ConversorMoneda conversorMoneda = new ConversorMoneda();
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("*************************************");
@@ -13,7 +13,7 @@ public class Principal {
         String monedaOrigen = entrada.nextLine();
 
         // Obtener el objeto Moneda
-        Moneda monedaData = buscadorMoneda.ingresoUsuario(monedaOrigen);
+        Moneda monedaData = conversorMoneda.ingresoUsuario(monedaOrigen);
         
         // Verificar si el objeto Moneda tiene tasas de conversión
         if (monedaData.getConversionRates() == null) {
@@ -27,7 +27,7 @@ public class Principal {
         System.out.println("\nIngrese la cantidad de dinero a convertir:");
         double cantidad = entrada.nextDouble();
         
-        double cantidadConvertida = buscadorMoneda.convertirMoneda(cantidad, monedaOrigen, monedaDestino);
+        double cantidadConvertida = conversorMoneda.convertirMoneda(cantidad, monedaOrigen, monedaDestino);
         
         System.out.println("\n" + cantidad + " " + monedaOrigen + " equivale a " + cantidadConvertida + " " + monedaDestino);
         
