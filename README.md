@@ -16,7 +16,9 @@ Para cumplir con este desafío utilizaré 🧰:
 
 🌀 Se creó una clase ConversorMoneda que es la encargada de obtener los datos de la API y contiene los métodos que extrae las tasas de conversión y otro método que las aplica y realiza la conversión de una moneda a otra.
 
-🌀  Se creó una clase Principal que es la encargada de interactuar con el usuario, le solicita datos y entrega una respuesta.
+🌀 Se creó una clase Principal que es la encargada de interactuar con el usuario, le solicita datos y entrega una respuesta.
+
+🌀 Se agregó un bucle *while* que permite al usuario seguir convirtiendo monedas hasta que el decida salir.
 
 ### Pendientes
 
