@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import modulos.ConversorMoneda;
 import modulos.Moneda;
+import modulos.MonedasAdmitidas;
 
 public class Principal {
     @SuppressWarnings("resource")
@@ -13,6 +14,9 @@ public class Principal {
         System.out.println("*************************************");
         System.out.println("Bienvenido al conversor de monedas");
         System.out.println("*************************************");
+
+        // Mostrar monedas admitidas al usuario
+        MonedasAdmitidas.mostrarMonedasAdmitidas();
 
         while(continuar) {
             System.out.println("\nPor favor, ingrese el código de la moneda de origen (en mayúsculas):");
