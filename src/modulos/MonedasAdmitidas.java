@@ -9,24 +9,23 @@ public class MonedasAdmitidas {
     static {
         // Inicializar el conjunto de monedas admitidas
         monedasAdmitidas = new HashSet<>();
-        monedasAdmitidas.add("USD: Dólar estadounidense");
-        monedasAdmitidas.add("EUR: Euro");
-        monedasAdmitidas.add("GBP: Libra Esterlina");
-        monedasAdmitidas.add("CLP: Peso Chileno");
-        monedasAdmitidas.add("ARS: Peso Argentino");
-        monedasAdmitidas.add("BOB: Boliviano");
-        monedasAdmitidas.add("PEN: Sol Peruano");
-        monedasAdmitidas.add("BRL: Real Brasileño");
-        monedasAdmitidas.add("COP: Peso Colombiano");
-        monedasAdmitidas.add("MXN: Peso Mexicano");
-        monedasAdmitidas.add("CNY: Renminbi Chino");
-        monedasAdmitidas.add("JPY: Yen Japonés");
+        monedasAdmitidas.add("USD");
+        monedasAdmitidas.add("EUR");
+        monedasAdmitidas.add("GBP");
+        monedasAdmitidas.add("CLP");
+        monedasAdmitidas.add("ARS");
+        monedasAdmitidas.add("BOB");
+        monedasAdmitidas.add("PEN");
+        monedasAdmitidas.add("BRL");
+        monedasAdmitidas.add("COP");
+        monedasAdmitidas.add("MXN");
+        monedasAdmitidas.add("CNY");
+        monedasAdmitidas.add("JPY");
     }
 
     public static boolean esMonedaAdmitida(String moneda) {
         return monedasAdmitidas.contains(moneda);
     }
-    
 
     public static void mostrarMonedasAdmitidas() {
         System.out.println("Monedas admitidas para conversión:");
