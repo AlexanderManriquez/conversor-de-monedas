@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+import modulos.ConversorMoneda;
+import modulos.Moneda;
+
 public class Principal {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
