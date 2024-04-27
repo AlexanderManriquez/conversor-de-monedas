@@ -44,8 +44,6 @@ public class Principal {
                 System.out.println("La moneda especificada no es admitida.");
                 continue; 
             }
-
-            entrada.nextLine();
         
             System.out.println("\nIngrese la cantidad de dinero a convertir:");
             double cantidad = entrada.nextDouble();         
