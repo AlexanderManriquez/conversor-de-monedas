@@ -4,6 +4,8 @@ import java.util.Set;
 
 public class Moneda {
 
+    private String time_last_update_utc;
+
     private Map<String, Double> conversion_rates;
 
     public Map<String, Double> getConversionRates() {
@@ -12,6 +14,10 @@ public class Moneda {
 
     public void setConversionRates(Map<String, Double> conversion_rates) {
         this.conversion_rates = conversion_rates;
+    }
+
+    public String getTime_last_update_utc() {
+        return time_last_update_utc;
     }
 
     // Método para obtener solo los códigos de moneda
