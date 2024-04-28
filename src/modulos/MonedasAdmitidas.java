@@ -29,10 +29,13 @@ public class MonedasAdmitidas {
 
     public static void mostrarMonedasAdmitidas() {
         System.out.println("Monedas admitidas para conversión:");
+        int index = 1;
         for (String moneda : monedasAdmitidas) {
-            System.out.println(moneda);
+        System.out.println(index + ". " + moneda);
+        index++;
         }
     }
 }
+
 
 
