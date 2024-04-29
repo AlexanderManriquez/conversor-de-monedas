@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import modulos.ConversorMoneda;
@@ -10,6 +12,7 @@ public class Principal {
         ConversorMoneda conversorMoneda = new ConversorMoneda();
         Scanner entrada = new Scanner(System.in);
         boolean continuar = true;
+        ArrayList<String> resumenConversiones = new ArrayList<>();
         
         System.out.println("*************************************");
         System.out.println("Bienvenido al conversor de monedas");
@@ -49,11 +52,14 @@ public class Principal {
             double cantidad = entrada.nextDouble();         
         
             double cantidadConvertida = conversorMoneda.convertirMoneda(cantidad, monedaOrigen, monedaDestino);
+            DecimalFormat formato = new DecimalFormat("#.##");
+            String resultadoFormateado = formato.format(cantidadConvertida);
         
-            System.out.println("\n" + cantidad + " " + monedaOrigen + " equivale a " + cantidadConvertida + " " + monedaDestino);
+            System.out.println("\n" + cantidad + " " + monedaOrigen + " equivale a " + resultadoFormateado + " " + monedaDestino);
 
             entrada.nextLine();
 
+            resumenConversiones.add( cantidad + " " + monedaOrigen + " equivale a " + resultadoFormateado + " " + monedaDestino +".");
             // Ofrecer opción de continuar o salir
             System.out.println("\n¿Desea realizar otra conversión? S para sí, cualquier otra tecla para salir.");
             String opcion = entrada.nextLine();
@@ -61,9 +67,16 @@ public class Principal {
                 continuar = false;
             }
         }
-        
-        System.out.println("Gracias por utilizar nuestro conversor.");
+
+        // Mostrar el historial del usuario al finalizar el ciclo de uso
+        System.out.println("\nResumen de conversiones en esta sesión:");
+        for (String consulta : resumenConversiones) {
+            System.out.println("~ " + consulta);
+        }
+
+        System.out.println("\nGracias por utilizar nuestro conversor.\n");
         
         entrada.close();
+    
     }
 }
