@@ -24,7 +24,7 @@ Para cumplir con este desafío utilizaré 🧰:
 
 ### Video demostrativo 📹:
 
-<video src="https://github.com/AlexanderManriquez/conversor-de-monedas/blob/main/mm-github/presentacion-conversor-de-monedas.mp4" width="320" height="240" controls></video>
+https://github.com/AlexanderManriquez/conversor-de-monedas/assets/157619134/8fbc91c7-f351-4656-a0a2-2d4224ad997b
 
 ### Avances
 
