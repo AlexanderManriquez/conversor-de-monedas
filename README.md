@@ -20,9 +20,9 @@ Para cumplir con este desafío utilizaré 🧰:
 
 🌀 Se agregó un bucle *while* que permite al usuario seguir convirtiendo monedas hasta que el decida salir.
 
-### Pendientes
+🌀 Se agregó un listado de códigos de moneda que se pueden utilizar en el conversor.
 
-💡Agregar un listado de códigos de moneda que se pueden utilizar en el conversor.
+### Pendientes
 
 💡Agregar un historial de conversiones.
 
