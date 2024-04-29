@@ -13,6 +13,7 @@ Para cumplir con este desafío utilizaré 🧰:
 
 ## Primera versión completada 🏴‍☠️
 
+
 ### Funcionalidades de la aplicación 💰:
 
   1. Permite al usuario realizar conversión de monedas entre un grupo de monedas seleccionadas para la aplicación (La lista puede ser ampliada según sea necesario).
@@ -22,8 +23,34 @@ Para cumplir con este desafío utilizaré 🧰:
   5. Se pregunta al usuario si desea continuar realizando conversiones o si prefiere salir.
   6. Cuando el usuario termina la sesión de conversión se entrega un resumen de las conversiones realizadas y se agradece al usuario.
 
-### Video demostrativo 📹:
 
+
+
+### Video demostrativo 🎥:
+
+https://github.com/AlexanderManriquez/conversor-de-monedas/assets/157619134/8fbc91c7-f351-4656-a0a2-2d4224ad997b
+
+
+
+
+### Capturas de pantalla 📷:
+
+ ▶️ Menú de bienvenida al usuario:
+ 
+  ![menu-bienvenida](https://github.com/AlexanderManriquez/conversor-de-monedas/assets/157619134/f1e072c4-9b02-48d9-9a93-de1394faf841)
+
+
+ ▶️ Interacción con el usuario: 
+ 
+  ![interaccion-usuario](https://github.com/AlexanderManriquez/conversor-de-monedas/assets/157619134/4c48c92e-97cf-44bc-ae7c-23c2f2a6db5e)
+
+
+ ▶️ Finalización de la aplicación:
+ 
+  ![resumen-despedida](https://github.com/AlexanderManriquez/conversor-de-monedas/assets/157619134/4420b87d-cb77-4616-a626-085b1fd31c0f)
+
+
+ 
 
 
 ### Avances
@@ -42,7 +69,7 @@ Para cumplir con este desafío utilizaré 🧰:
 
 ### Pendientes
 
-💡Agregar un historial de conversiones.
+💡 Sugerencias de usuarios...
 
-💡Crear una parte visual que permita al usuario interactuar con la aplicación y seleccionar las monedas de un listado.
+💡 Crear una parte visual que permita al usuario interactuar con la aplicación y seleccionar las monedas de un listado.
 
