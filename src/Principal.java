@@ -55,7 +55,7 @@ public class Principal {
             entrada.nextLine();
 
             // Ofrecer opción de continuar o salir
-            System.out.println("¿Desea realizar otra conversión? S para sí, cualquier otra tecla para salir.");
+            System.out.println("\n¿Desea realizar otra conversión? S para sí, cualquier otra tecla para salir.");
             String opcion = entrada.nextLine();
             if(!opcion.equalsIgnoreCase("S")){
                 continuar = false;
