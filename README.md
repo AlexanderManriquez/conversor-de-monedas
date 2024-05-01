@@ -6,7 +6,7 @@ Debo realizar solicitudes a una API de tasas de cambio,manipular datos JSON y, f
 
 Para cumplir con este desafío utilizaré 🧰:
 
-- ☕ Java
+- <a href="https://www.java.com/es/">☕ Java</a>
 - <a href="https://code.visualstudio.com/">VS Code</a>
 - <a href="https://www.exchangerate-api.com/">ExchangeRate API</a>
 
